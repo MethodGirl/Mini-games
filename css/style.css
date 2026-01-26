@@ -1,0 +1,491 @@
+/**
+  Убираем внешние и внутренние отступы
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+    list-style: none;
+}
+
+/**
+  Убираем стандартную стилизацию ссылок
+ */
+
+a {
+    text-decoration: none;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+    --paragraphMarginBottom: 24px;
+
+    margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+html {
+    /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+    height: 100%;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+    scroll-behavior: smooth;
+}
+
+body {
+    /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+    min-height: 100%;
+    /**
+    Унифицированный интерлиньяж
+   */
+    line-height: 1.5;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+svg *[fill] {
+    fill: currentColor
+}
+
+svg *[stroke] {
+    stroke: currentColor
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+    transition-property: fill, stroke;
+}
+
+/** Делаем перенос текста */
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-weight: 500;
+}
+
+/** анимация */
+
+.animate__animated {
+    animation-duration: 0.5s !important;
+}
+
+/** container */
+
+.container {
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+/** root */
+
+:root {
+    --font-family-base: 'Montserrat', sans-serif;
+    --color-white: #FFFFFF;
+    --color-green-light: #E1FF8F;
+    --color-green-dark: #BCEC30;
+    --color-black: #202027;
+}
+
+/** шрифты */
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+/** HEADER*/
+
+.header__wrapper {
+    background-color: var(--color-green-light);
+    position: relative;
+}
+
+.header__content {
+    padding: 196px 0 156px 120px;
+    max-width: 889px;
+    position: relative;
+}
+
+.header__title {
+    color: var(--color-black);
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.header__title-line {
+    width: 790px;
+    display: block;
+}
+
+.header__description {
+    color: var(--color-black);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-bottom: 48px;
+    max-width: 745px;
+}
+
+.header__description--bold {
+    font-weight: 600;
+}
+
+.header__link-anchor {
+    display: block;
+    text-align: center;
+    width: 247px;
+    color: var(--color-white);
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px 28px;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-black);
+    border-radius: 60px;
+    transition: background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.header__link-anchor:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.header__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.header__content::before {
+    content: "";
+    position: absolute;
+    width: 57px;
+    top: 94px;
+    left: 63px;
+    height: 57px;
+    background-image: url(/img/header__content-starBefore.svg);
+}
+
+.header__content::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    top: 69px;
+    left: 156px;
+    height: 35px;
+    background-image: url(/img/header__content-starAfter.svg);
+}
+
+.header__wrapper::before {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background-image: url(/img/header__wrapper-starBefore.svg);
+    top: 538px;
+    left: 948px;
+}
+
+.header__wrapper::after {
+    content: "";
+    position: absolute;
+    height: 83px;
+    width: 83px;
+    background-image: url(/img/header__wrapper-starAfter.svg);
+    top: 568px;
+    left: 1013px;
+}
+
+.dynamic-headline {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-green-dark);
+    height: 90px;
+}
+
+.dynamic-headline__text {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    color: var(--color-black);
+    margin-inline: 51px;
+}
+
+/** FYP */
+
+.fyp>.container {
+    background-color: var(--color-black);
+}
+
+.fyp__intro {
+    padding-top: 94px;
+    margin: 0 120px 72px 119px;
+}
+
+.fyp__intro-title {
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 24px;
+}
+
+.fyp-description__line {
+    max-width: 788px;
+    color: var(--color-white);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.fyp-content {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    grid-template-columns: repeat(3, 378px);
+    padding-bottom: 50px;
+}
+
+.fyp-content__group {
+    display: grid;
+    gap: 32px;
+    z-index: 2;
+}
+
+.fyp-card {
+    background-color: var(--color-white);
+    box-shadow: 0px 12.61px 42.25px -7.57px #00000021;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.fyp-card:hover {
+    transform: scale(1.05);
+}
+
+.fyp-card__text {
+    margin: 32px 32px 36px 32px;
+}
+
+.fyp-card__text-number {
+    font-size: 16px;
+    background-color: #F7F7F7;
+    border-radius: 52.58px;
+    padding: 8px 16px 10px 16px;
+    display: inline-block;
+    color: var(--color-black);
+    margin-bottom: 16px;
+}
+
+.fyp-card__text-name {
+    font-size: 32px;
+    font-weight: 600;
+    max-width: 300px;
+    color: var(--color-black);
+}
+
+.fyp-content::before {
+    content: "";
+    width: 584.7165px;
+    position: absolute;
+    height: 584.7165px;
+    background-image: url(/img/cards-img/fyp__img-star.png);
+    background-repeat: no-repeat;
+    bottom: 774px;
+    right: -127px;
+}
+
+.fyp-content__group-first {
+    position: relative;
+}
+
+.fyp-content__group-first::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-repeat: no-repeat;
+    bottom: 571px;
+    left: -80px;
+    background-image: url(/img/cards-img/fyp__mini-starBefore-img.svg);
+}
+
+.fyp-content__group-first::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    bottom: 655px;
+    left: -100px;
+    background-image: url(/img/cards-img/fyp__mini-starAfter-img.svg);
+}
