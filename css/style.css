@@ -194,7 +194,7 @@ body {
 /** container */
 
 .container {
-    max-width: 1440px;
+    padding-inline: calc(50% - 600px);
     margin-inline: auto;
 }
 
@@ -264,7 +264,7 @@ body {
 }
 
 .header__content {
-    padding: 196px 0 156px 120px;
+    padding: 196px 0 156px 0;
     max-width: 889px;
     position: relative;
 }
@@ -325,7 +325,7 @@ body {
     position: absolute;
     width: 57px;
     top: 94px;
-    left: 63px;
+    left: -56px;
     height: 57px;
     background-image: url(/img/header__content-starBefore.svg);
 }
@@ -335,7 +335,7 @@ body {
     position: absolute;
     width: 35px;
     top: 69px;
-    left: 156px;
+    left: 35px;
     height: 35px;
     background-image: url(/img/header__content-starAfter.svg);
 }
@@ -347,7 +347,7 @@ body {
     width: 35px;
     background-image: url(/img/header__wrapper-starBefore.svg);
     top: 538px;
-    left: 948px;
+    right: 433px;
 }
 
 .header__wrapper::after {
@@ -357,7 +357,7 @@ body {
     width: 83px;
     background-image: url(/img/header__wrapper-starAfter.svg);
     top: 568px;
-    left: 1013px;
+    right: 321px;
 }
 
 .dynamic-headline {
@@ -387,7 +387,7 @@ body {
 
 .fyp__intro {
     padding-top: 94px;
-    margin: 0 120px 72px 119px;
+    margin: 0 120px 72px 0;
 }
 
 .fyp__intro-title {
@@ -448,7 +448,7 @@ body {
 
 .fyp-card__text-name {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
     max-width: 300px;
     color: var(--color-black);
 }
