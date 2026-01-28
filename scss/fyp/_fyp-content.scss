@@ -1,0 +1,41 @@
+.fyp-content {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    gap: 32px;
+    grid-template-columns: repeat(3, minmax(0, 378px));
+    padding-bottom: 50px;
+    align-items: normal;
+
+    &__group {
+        display: grid;
+        gap: 32px;
+        z-index: 2;
+    }
+
+    &__group-first {
+        position: relative;
+    }
+}
+
+.fyp-content__group-first::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-repeat: no-repeat;
+    bottom: 571px;
+    left: -80px;
+    background-image: url(/img/cards-img/fyp__mini-starBefore-img.svg);
+}
+
+.fyp-content__group-first::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    bottom: 655px;
+    left: -100px;
+    background-image: url(/img/cards-img/fyp__mini-starAfter-img.svg);
+}

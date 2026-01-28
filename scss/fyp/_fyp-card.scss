@@ -1,0 +1,27 @@
+.fyp-card {
+    background-color: var(--color-white);
+    box-shadow: 0px 12.61px 42.25px -7.57px #00000021;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+
+    &__text {
+        margin: 32px 32px 36px 32px;
+    }
+
+    &__text-number {
+        font-size: 16px;
+        background-color: #F7F7F7;
+        border-radius: 52.58px;
+        padding: 8px 16px 10px 16px;
+        display: inline-block;
+        color: var(--color-black);
+        margin-bottom: 16px;
+    }
+
+    &__text-name {
+        font-size: clamp(24px, 2.5vw, 32px);
+        font-weight: 700;
+        max-width: 300px;
+        color: var(--color-black);
+    }
+}

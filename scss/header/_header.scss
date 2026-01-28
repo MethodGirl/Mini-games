@@ -1,0 +1,102 @@
+.header {
+    position: relative;
+
+    &__wrapper {
+        background-color: var(--color-green-light);
+        position: relative;
+    }
+
+    &__content {
+        padding: 196px 0 156px 0;
+        max-width: 889px;
+        position: relative;
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: clamp(48px, 4.5vw, 64px);
+        line-height: 1.4;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    &__title-line {
+        width: 790px;
+        display: block;
+    }
+
+    &__description {
+        color: var(--color-black);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 48px;
+        max-width: 745px;
+    }
+
+    &__description--bold {
+        font-weight: 600;
+    }
+
+    &__link-anchor {
+        display: block;
+        text-align: center;
+        width: 247px;
+        color: var(--color-white);
+        font-size: 24px;
+        font-weight: 600;
+        padding: 16px 28px;
+        background-color: var(--color-black);
+        border: 1px solid var(--color-black);
+        border-radius: 60px;
+        transition: background-color 0.3s ease,
+            color 0.3s ease;
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    width: 57px;
+    top: 94px;
+    left: 63px;
+    z-index: 2;
+    height: 57px;
+    background-image: url(/img/header__content-starBefore.svg);
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    top: 69px;
+    left: 156px;
+    height: 35px;
+    background-image: url(/img/header__content-starAfter.svg);
+}
+
+.header__wrapper::before {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background-image: url(/img/header__wrapper-starBefore.svg);
+    top: 538px;
+    right: 433px;
+}
+
+.header__wrapper::after {
+    content: "";
+    position: absolute;
+    height: 83px;
+    width: 83px;
+    background-image: url(/img/header__wrapper-starAfter.svg);
+    top: 568px;
+    right: 321px;
+}
