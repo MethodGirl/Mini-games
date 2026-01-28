@@ -596,7 +596,7 @@ body {
     top: 0px;
     left: -92px;
   }
-  .header .header::before {
+  .header::before {
     content: "";
     position: absolute;
     width: 21px;
