@@ -32,7 +32,9 @@ alert(ten/two);
 
 //5
 
-alert(2**5);
+let result = 2**5
+
+alert(result);
 
 //6
 
@@ -65,9 +67,9 @@ let user = {
 
 //10
 
-let userAge = prompt("Как вас зовут?");
+let userName = prompt("Как вас зовут?");
 
-alert(`Привет, ${userAge}!`);
+alert(`Привет, ${userName}!`);
 
 
 //Дополнительное задание, чтобы ответ 
