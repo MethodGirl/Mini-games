@@ -1,0 +1,29 @@
+.dynamic-headline {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-green-dark);
+    height: 90px;
+
+    &__text {
+        position: relative;
+        font-size: clamp(16px, 3.2vw, 30px);
+        font-weight: 700;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+        color: var(--color-black);
+        margin-inline: 102px;
+    }
+}
+
+.dynamic-headline__text::after{
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-image: url(/img/dynamic-headline__img-star.svg);
+    top: 4px;
+    left: -119px;
+}

@@ -1,0 +1,13 @@
+@media (max-width: 1220px) {
+    .container {
+        padding-inline: max(90px, calc(50% - 600px));
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-inline: max(16px, calc(50% - 600px));
+        margin-inline: auto;
+    }
+}
