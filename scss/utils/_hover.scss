@@ -1,4 +1,5 @@
-.header__link-anchor:hover {
+.header__link-anchor:hover,
+.game__intro-button:hover {
     background-color: var(--color-white);
     color: var(--color-black);
 }

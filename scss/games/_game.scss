@@ -1,0 +1,52 @@
+.game {
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    border-radius: 30px;
+    max-height: 500px;
+
+    &__image {
+        border-radius: 30px;
+        min-width: 600px;
+        height: auto;
+    }
+
+    &__intro {
+        margin: 48px 48px 85px 48px;
+    }
+
+    &__intro-name {
+        font-size: clamp(20px, 3.5vw, 48px);
+        font-weight: 700;
+        max-width: 459px;
+        margin-bottom: 24px;
+        color: var(--color-black);
+    }
+
+    &__intro-description {
+        font-size: clamp(16px, 2vw, 24px);
+        line-height: 32px;
+        font-weight: 400;
+        margin-bottom: 36px;
+    }
+
+    &__intro-button {
+        background-color: var(--color-black);
+        border-radius: 60px;
+        border: 1px solid var(--color-black);
+        padding: 16px 28px;
+        color: var(--color-white);
+        font-size: 24px;
+        line-height: 142%;
+        text-align: center;
+        width: 247px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        cursor: pointer;
+    }
+}
+
+.first-game,
+.last-game {
+    position: relative;
+}

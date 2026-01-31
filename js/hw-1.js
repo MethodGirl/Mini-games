@@ -1,4 +1,5 @@
-//1
+/*
+1
 
 let a = 10;
 
@@ -8,19 +9,19 @@ a = 20
 
 alert(a)
 
-//2
+2
 
 let firstIphoneReleaseYear = 2007;
 
 alert(firstIphoneReleaseYear)
 
-//3
+3
 
 let jsAuthor = 'Brendan Eich';
 
 alert(jsAuthor)
 
-//4
+4
 
 let ten = 10;
 let two = 2;
@@ -30,17 +31,17 @@ alert(ten-two);
 alert(ten*two);
 alert(ten/two);
 
-//5
+5
 
 let result = 2**5
 
 alert(result);
 
-//6
+6
 
 alert(9%2);
 
-//7
+7
 
 let num = 1;
 num += 5;
@@ -51,13 +52,13 @@ num += 1;
 num -= 1
 alert(num);
 
-//8
+8
 
 let age = prompt("Сколько вам лет?")
 
 alert(age)
 
-//9
+9
 
 let user = {
     name: "Joe",
@@ -65,15 +66,15 @@ let user = {
     isAdmin: true,
 }
 
-//10
+10
 
 let userName = prompt("Как вас зовут?");
 
 alert(`Привет, ${userName}!`);
 
 
-//Дополнительное задание, чтобы ответ 
-// был именно 5, то загадайте 3
+Дополнительное задание, чтобы ответ 
+ был именно 5, то загадайте 3
 
 let number = prompt("Загадай число")
 let doubleNumber = +number*2;
@@ -92,3 +93,4 @@ let finalNumber = divideOnTwo - +number;
 
 alert(`Результат равен: ${finalNumber}`);
 
+... */
