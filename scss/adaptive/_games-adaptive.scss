@@ -1,0 +1,145 @@
+@media(max-width: 1160px) {
+    .games__content {
+        .game {
+            max-height: 450px;
+
+            &__intro-name {
+                margin-bottom: 15px;
+            }
+
+            &__intro {
+                margin: 29px 29px 32px 29px;
+            }
+
+            &__intro-button {
+                width: 230px;
+            }
+
+            &__image {
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media(max-width: 981px) {
+    .game__image {
+        max-width: 300px;
+        min-width: unset;
+        height: auto;
+    }
+
+    .game {
+        height: 340px;
+    }
+
+    .games__wrapper::after {
+        right: 69px;
+        top: 140px;
+    }
+
+    .games__wrapper::before {
+        right: 154px;
+        top: 177px;
+    }
+
+    .game__intro-button {
+        width: 190px;
+    }
+
+    .game__intro {
+        margin: 32px 22px 0 22px;
+    }
+
+    .game__intro-description {
+        font-size: clamp(14px, 2vw, 24px);
+        margin-bottom: 18px;
+        line-height: 1.2;
+    }
+
+    .game__intro-name {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media(max-width: 827px) {
+    .container {
+        padding-inline: max(15px, calc(50% - 600px));
+        margin-inline: auto;
+    }
+
+    .games__wrapper {
+        padding-bottom: 10px;
+    }
+
+    .games__content {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .games__title {
+        margin-bottom: 48px !important;
+        padding-top: 48px !important;
+    }
+
+    .game__intro-name {
+        font-size: 32px;
+        margin-bottom: 16px;
+        line-height: 1.3;
+    }
+
+    .game__intro-description {
+        font-size: 16px;
+    }
+
+    .game__intro-button {
+        display: block;
+        width: 285px;
+        margin: 32px auto 0;
+    }
+
+    .game__intro {
+        margin: 29px 29px 32px 29px;
+    }
+
+    .game {
+        display: flex;
+        flex-direction: column;
+        max-width: 343px;
+        max-height: unset !important;
+        height: unset !important;
+    }
+
+    .last-game {
+        margin-bottom: 0;
+    }
+
+    .game__image {
+        max-width: 343px;
+        min-width: unset;
+        height: auto;
+    }
+
+    .game:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+    .games__container::before,
+    .games__container::after,
+    .games__wrapper::before,
+    .games__wrapper::after {
+        display: none;
+    }
+
+}
+
+@media(max-width: 374px) {
+    .game__image {
+        max-width: 300px;
+    }
+
+    .game{
+        width: min-content;
+    }
+}
