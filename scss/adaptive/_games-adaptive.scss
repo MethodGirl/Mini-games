@@ -1,5 +1,4 @@
 @media(max-width: 1160px) {
-    .games__content {
         .game {
             max-height: 450px;
 
@@ -19,7 +18,6 @@
                 width: 400px;
             }
         }
-    }
 }
 
 @media(max-width: 981px) {
@@ -79,8 +77,8 @@
     }
 
     .games__title {
-        margin-bottom: 48px !important;
-        padding-top: 48px !important;
+        margin-bottom: 48px;
+        padding-top: 48px;
     }
 
     .game__intro-name {
@@ -107,8 +105,8 @@
         display: flex;
         flex-direction: column;
         max-width: 343px;
-        max-height: unset !important;
-        height: unset !important;
+        max-height: unset;
+        height: unset;
     }
 
     .last-game {
