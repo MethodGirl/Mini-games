@@ -1,23 +1,23 @@
 @media(max-width: 1160px) {
-        .game {
-            max-height: 450px;
+    .game {
+        max-height: 450px;
 
-            &__intro-name {
-                margin-bottom: 15px;
-            }
-
-            &__intro {
-                margin: 29px 29px 32px 29px;
-            }
-
-            &__intro-button {
-                width: 230px;
-            }
-
-            &__image {
-                width: 400px;
-            }
+        &__intro-name {
+            margin-bottom: 15px;
         }
+
+        &__intro {
+            margin: 29px 29px 32px 29px;
+        }
+
+        &__intro-button {
+            width: 230px;
+        }
+
+        &__image {
+            width: 400px;
+        }
+    }
 }
 
 @media(max-width: 981px) {
@@ -82,7 +82,7 @@
     }
 
     .game__intro-name {
-        font-size: 32px;
+        font-size: 32px !important;
         margin-bottom: 16px;
         line-height: 1.3;
     }
@@ -132,12 +132,20 @@
 
 }
 
-@media(max-width: 374px) {
+@media(max-width: 370px) {
     .game__image {
         max-width: 300px;
     }
 
-    .game{
+    .game {
         width: min-content;
+    }
+
+    .game__intro {
+        margin: 29px 15px 32px 15px;
+    }
+
+    .game__intro-button {
+        width: 235px;
     }
 }
