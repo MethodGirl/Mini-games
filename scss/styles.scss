@@ -224,11 +224,13 @@ body {
 @import "fyp/fyp-card";
 @import "fyp/fyp-description";
 
-@import "adaptive/fyp-adaptive";
-@import "adaptive/container-adaptive";
-@import "adaptive/header-adaptive";
-
 @import "games/games";
 @import "games/game";
 
 @import "footer/footer";
+
+@import "adaptive/fyp-adaptive";
+@import "adaptive/container-adaptive";
+@import "adaptive/header-adaptive";
+@import "adaptive/games-adaptive";
+@import "adaptive/footer";

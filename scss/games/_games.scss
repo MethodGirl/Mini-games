@@ -1,12 +1,15 @@
 .games {
+    background-color: var(--color-black);
+
     &__container {
         position: relative;
+        background-color: var(--color-black);
     }
 
     &__wrapper {
         position: relative;
-        background-color: var(--color-black);
         padding-bottom: 144px;
+        background-color: var(--color-black);
     }
 
 
