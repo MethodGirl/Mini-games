@@ -232,6 +232,10 @@ body {
           transform: scale(1.05);
 }
 
+button:focus-visible {
+  border: none;
+}
+
 @font-face {
   font-family: "Montserrat";
   font-style: normal;

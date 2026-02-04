@@ -3,7 +3,7 @@ let guessNumberGame = document.querySelector('.button-guessAnumber');
 function guessNumber() {
     let input = prompt('Я загадала число, попробуй угадать (・ω・)ﾉ');
     
-    if (input === null) {
+    if (input === null || isNaN(input)) {
         alert('Игра окончена (×﹏×)');
         return;
     }
@@ -15,14 +15,14 @@ function guessNumber() {
     do {
         if (number > question) {
             input = prompt('Нужно число побольше, давай ещё раз  ( ╯°□°)╯ ┻━━┻');
-            if (input === null) {
+            if (input === null || isNaN(input)) {
                 alert('Игра окончена (×﹏×)');
                 return;
             }
             question = +input;
         } else if (number < question) {
             input = prompt('Нужно число поменьше, давай ещё раз  ( ╯°□°)╯ ┻━━┻');
-            if (input === null) {
+            if (input === null || isNaN(input)) {
                 alert('Игра окончена (×﹏×)');
                 return;
             }
