@@ -10,7 +10,7 @@ function guessNumber() {
 
     let question = +input;
     let number = Math.trunc(Math.random() * 100) + 1;
-    console.log('Загадано:', number, 'Введено:', question);
+    console.log('Загадано:', number);
 
     do {
         if (number > question) {
