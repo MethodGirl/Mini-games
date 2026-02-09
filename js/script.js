@@ -40,29 +40,32 @@ guessNumberGame.addEventListener('click', () => guessNumber());
 // 2 игра
 
 const simpleArithmeticGame = document.querySelector('.button-simpleArithmetic');
+const numbersMin = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbersMax = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+const signs = ['-', '+', '/', '*'];
+
+function getRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+}
 
 function doArithmeticTasks() {
     let playAgain = true;
 
     // сделала при помощи while вместо рекурсии, чтобы избежать
     // переполнение стека, если игры будет долгой
-    
-    while (playAgain) {
-        let numbersMin = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        let numbersMax = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-        let signs = ['-', '+', '/', '*'];
 
-        let randomNumberMin = numbersMin[Math.floor(Math.random() * numbersMin.length)]
-        let randomNumberMax = numbersMax[Math.floor(Math.random() * numbersMax.length)]
-        let randomSign = signs[Math.floor(Math.random() * signs.length)]
+    while (playAgain) {
+        let randomNumberMin = getRandom(numbersMin)
+        let randomNumberMax = getRandom(numbersMax)
+        let randomSign = getRandom(signs)
 
         let biggest = Math.max(randomNumberMin, randomNumberMax);
         let smallest = Math.min(randomNumberMin, randomNumberMax);
 
         if (randomSign === '/') {
             do {
-                randomNumberMin = numbersMin[Math.floor(Math.random() * numbersMin.length)]
-                randomNumberMax = numbersMax[Math.floor(Math.random() * numbersMax.length)]
+                randomNumberMin = getRandom(numbersMin)
+                randomNumberMax = getRandom(numbersMax)
 
                 biggest = Math.max(randomNumberMin, randomNumberMax);
                 smallest = Math.min(randomNumberMin, randomNumberMax);
@@ -71,12 +74,13 @@ function doArithmeticTasks() {
 
         if (randomSign === '*') {
             do {
-                randomNumberMin = numbersMin[Math.floor(Math.random() * numbersMin.length)];
-                randomNumberMax = numbersMax[Math.floor(Math.random() * numbersMax.length)];
-            } while (randomNumberMin > 10 || randomNumberMax > 10);
+                randomNumberMin = getRandom(numbersMin)
+                randomNumberMax = getRandom(numbersMax)
 
-            biggest = Math.max(randomNumberMin, randomNumberMax);
-            smallest = Math.min(randomNumberMin, randomNumberMax);
+                biggest = Math.max(randomNumberMin, randomNumberMax);
+                smallest = Math.min(randomNumberMin, randomNumberMax);
+
+            } while (biggest * smallest > 100);
         }
 
         let result;
