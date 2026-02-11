@@ -197,7 +197,7 @@ function takeQuiz() {
         while (true) {
             let userInput = prompt(`${task.question}\n${task.options.join('\n')}`)
 
-            if (userInput === null || Number.isNaN(answer)) {
+            if (userInput === null) {
                 alert('Вводить нужно цифру, игра окончена (×﹏×)')
                 return
             }
