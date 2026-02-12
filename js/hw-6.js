@@ -1,7 +1,7 @@
 //1
 let str = 'js';
 
-str.toUpperCase
+str = str.toUpperCase()
 
 console.log(str)
 
@@ -23,7 +23,7 @@ let num = 32.58884;
 
 console.log(Math.floor(num))
 console.log(Math.ceil(num))
-console.log(Math.trunc(num))
+console.log(Math.round(num))
 
 //4
 
