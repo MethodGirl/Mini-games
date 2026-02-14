@@ -241,3 +241,72 @@ function takeQuiz() {
 }
 
 simpleQuizGame.addEventListener('click', () => takeQuiz())
+
+//5 игра
+
+let rockPaperScissorsGame = document.querySelector('.button-rockPaperScissors')
+
+let rules = [
+    ["камень", "ножницы"],
+    ["ножницы", "бумага"],
+    ["бумага", "камень"]
+];
+
+let gameItems = ["камень","ножницы","бумага"]
+
+function rockPaperScissors() {
+    let playAgain = true;
+    let computerScore = 0;
+    let playerScore = 0;
+
+    // делаю снова через while, а не рекурсию, чтобы не забивать стек
+
+    while (playAgain) {
+        let input = prompt('Давай сыграем, можно вводить цифру или писать слово\n( ˘▽˘)っ Камень, ножницы или бумага?')
+
+        if (input === null) {
+            alert('Игра окончена (×﹏×)')
+            return
+        }
+
+        input = input.toLocaleLowerCase().trim();
+
+        let computerChoice = getRandom(gameItems);
+
+        switch (input) {
+            case "1":
+            case "камень":
+                input = gameItems[0]; // камень
+                break;
+            case "2":
+            case "ножницы":
+                input = gameItems[1]; // ножницы
+                break;
+            case "3":
+            case "бумага":
+                input = gameItems[2]; // бумага
+                break;
+            default:
+                alert('Некорректный ввод, давай ещё раз (￣ﾊ￣*)');
+                continue;
+        }
+
+        let playerWin = rules.some(rule =>
+            rule[0] === input && rule[1] === computerChoice
+        );
+
+        if (playerWin) {
+            playerScore++
+            playAgain = confirm(`Неееет, ты выиграл ( ╯°□°)╯ ┻━━┻ дашь отыграться?\nТвой счёт: ${playerScore}, мой счёт: ${computerScore}`);
+        } else if (computerChoice === input) {
+            playAgain = confirm(`Мы мыслим одинаково, сыграем ещё раз?\nТвой счёт: ${playerScore}, мой счёт: ${computerScore}`)
+        } else {
+            computerScore++
+            playAgain = confirm(`Ну да, ну я (★ω★), сыграем ещё раз?\nТвой счёт: ${playerScore}, мой счёт: ${computerScore}`)
+        }
+    }
+
+    alert('Игра окончена (×﹏×)')
+}
+
+rockPaperScissorsGame.addEventListener('click', () => rockPaperScissors())
