@@ -35,7 +35,13 @@
 @media (max-width: 835px) {
     .fyp-card {
         height: 470px;
+
+        &__img{
+            width: 100%;
+        }
     }
+
+
 }
 
 

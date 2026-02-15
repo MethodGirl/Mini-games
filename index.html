@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Mini-games</title>
     <script src="./js/script.js" defer></script>
   </head>
@@ -23,15 +23,17 @@
             </p>
             <a href="#about" class="header__link-anchor">Поехали!</a>
           </div>
-          <img src="./img/header__img.png" alt="Звезда" class="header__img">
+          <img src="./img/header__img.png" alt="Звезда" class="header__img" />
         </div>
         <div class="dynamic-headline">
-          <p class="dynamic-headline__text">Викторина</p>
-          <p class="dynamic-headline__text">Угадай число</p>
-          <p class="dynamic-headline__text">Переверни текст</p>
-          <p class="dynamic-headline__text">Простая арифметика</p>
-          <p class="dynamic-headline__text">Камень, ножницы, бумага</p>
-          <p class="dynamic-headline__text">Генератор случайных цветов</p>
+          <div class="dynamic-headline__wrapper">
+            <p class="dynamic-headline__text">Викторина</p>
+            <p class="dynamic-headline__text">Угадай число</p>
+            <p class="dynamic-headline__text">Переверни текст</p>
+            <p class="dynamic-headline__text">Простая арифметика</p>
+            <p class="dynamic-headline__text">Камень, ножницы, бумага</p>
+            <p class="dynamic-headline__text">Генератор случайных цветов</p>
+          </div>
         </div>
       </div>
     </header>
@@ -59,7 +61,8 @@
                   <img
                     src="/img/cards-img/fyp-guessAnumber__img.png"
                     alt="Угадай число"
-                    class="fyp-card__img">
+                    class="fyp-card__img"
+                  />
                   <div class="fyp-card__text">
                     <p class="fyp-card__text-number">Игра № 1</p>
                     <h3 class="fyp-card__text-name">Угадай число</h3>
@@ -71,7 +74,8 @@
                   <img
                     src="/img/cards-img/fyp-rockPaperScissors__img.png"
                     alt="Камень,ножницы,бумага"
-                    class="fyp-card__img">
+                    class="fyp-card__img"
+                  />
                   <div class="fyp-card__text">
                     <p class="fyp-card__text-number">Игра № 4</p>
                     <h3 class="fyp-card__text-name">Камень, ножницы, бумага</h3>
@@ -85,7 +89,8 @@
                   <img
                     src="/img/cards-img/fyp-SimpleArithmetic__img.png"
                     alt="Простая арифметика"
-                    class="fyp-content__img">
+                    class="fyp-content__img"
+                  />
                   <div class="fyp-card__text">
                     <p class="fyp-card__text-number">Игра № 2</p>
                     <h3 class="fyp-card__text-name">Простая арифметика</h3>
@@ -97,7 +102,8 @@
                   <img
                     src="/img/cards-img/fyp-simpleQuiz__img.png"
                     alt="Простая викторина"
-                    class="fyp-card__img">
+                    class="fyp-card__img"
+                  />
                   <div class="fyp-card__text">
                     <p class="fyp-card__text-number">Игра № 5</p>
                     <h3 class="fyp-card__text-name">Простая викторина</h3>
@@ -111,7 +117,8 @@
                   <img
                     src="/img/cards-img/fyp-turnText__img.png"
                     alt="Переверни текст"
-                    class="fyp-card__img">
+                    class="fyp-card__img"
+                  />
                   <div class="fyp-card__text">
                     <p class="fyp-card__text-number">Игра № 3</p>
                     <h3 class="fyp-card__text-name">Переверни текст</h3>
@@ -123,7 +130,8 @@
                   <img
                     src="/img/cards-img/fyp-randomColorGenerator__img.png"
                     alt="Генератор случайных цветов"
-                    class="fyp-card__img">
+                    class="fyp-card__img"
+                  />
                   <div class="fyp-card__text">
                     <p class="fyp-card__text-number">Игра № 6</p>
                     <h3 class="fyp-card__text-name">
@@ -147,24 +155,30 @@
                   <p class="game__intro-description">
                     Попробуй угадать случайное число от 1 до 100.
                   </p>
-                  <button class="game__intro-button button-guessAnumber">Играть!</button>
+                  <button class="game__intro-button button-guessAnumber">
+                    Играть!
+                  </button>
                 </div>
                 <img
                   src="/img/games-img/game__guessAnumber-img.png"
                   alt="Угадай число"
-                  class="game__image">
+                  class="game__image"
+                />
               </div>
               <div class="game" id="SimpleArithmetic">
                 <img
                   src="/img/games-img/games__SimpleArithmetic-img.png"
                   alt="Простая арифметика"
-                  class="game__image">
+                  class="game__image"
+                />
                 <div class="game__intro">
                   <h3 class="game__intro-name">Простая арифметика</h3>
                   <p class="game__intro-description">
                     Попробуй решить простые арифметические задачи.
                   </p>
-                  <button class="game__intro-button button-simpleArithmetic">Играть!</button>
+                  <button class="game__intro-button button-simpleArithmetic">
+                    Играть!
+                  </button>
                 </div>
               </div>
               <div class="game" id="turnText">
@@ -173,24 +187,30 @@
                   <p class="game__intro-description">
                     Попробуй ввести текст, который будет перевернут.
                   </p>
-                  <button class="game__intro-button button-turnText">Играть!</button>
+                  <button class="game__intro-button button-turnText">
+                    Играть!
+                  </button>
                 </div>
                 <img
                   src="/img/games-img/game__turnText-img.png"
                   alt="Переверни текст"
-                  class="game__image">
+                  class="game__image"
+                />
               </div>
               <div class="game" id="rockPaperScissors">
                 <img
                   src="/img/games-img/game__rockPaperScissors-img.png"
                   alt="Камень, ножницы, бумага"
-                  class="game__image">
+                  class="game__image"
+                />
                 <div class="game__intro">
                   <h3 class="game__intro-name">Камень, ножницы, бумага</h3>
                   <p class="game__intro-description">
                     Сыграй в популярную игру против компьютера.
                   </p>
-                  <button class="game__intro-button button-rockPaperScissors">Играть!</button>
+                  <button class="game__intro-button button-rockPaperScissors">
+                    Играть!
+                  </button>
                 </div>
               </div>
               <div class="game" id="simpleQuiz">
@@ -199,25 +219,33 @@
                   <p class="game__intro-description">
                     Отвечай на вопросы викторины с вариантами ответов.
                   </p>
-                  <button class="game__intro-button button-simpleQuiz">Играть!</button>
+                  <button class="game__intro-button button-simpleQuiz">
+                    Играть!
+                  </button>
                 </div>
                 <img
                   src="/img/games-img/game__simpleQuiz-img.png"
                   alt="Простая викторина"
-                  class="game__image">
+                  class="game__image"
+                />
               </div>
               <div class="game last-game" id="randomColorGenerator">
                 <img
                   src="/img/games-img/game__randomColorGenerator-img.png"
                   alt="Генератор случайных цветов"
-                  class="game__image">
+                  class="game__image"
+                />
                 <div class="game__intro">
                   <h3 class="game__intro-name">Генератор случайных цветов</h3>
                   <p class="game__intro-description">
                     Игра, в которой при клике на кнопку фон страницы меняется на
                     случайный.
                   </p>
-                  <button class="game__intro-button button-randomColorGenerator">Играть!</button>
+                  <button
+                    class="game__intro-button button-randomColorGenerator"
+                  >
+                    Играть!
+                  </button>
                 </div>
               </div>
             </div>

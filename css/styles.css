@@ -213,7 +213,7 @@ body {
 }
 
 :root {
-  --font-family-base: "Montserrat", sans-serif;
+  --font-family-base: 'Montserrat', sans-serif;
   --color-white: #FFFFFF;
   --color-green-light: #E1FF8F;
   --color-green-dark: #BCEC30;
@@ -377,9 +377,18 @@ button:focus-visible {
   font-size: clamp(16px, 3.2vw, 30px);
   font-weight: 700;
   text-transform: uppercase;
-  text-wrap: nowrap;
+  white-space: nowrap;
   color: var(--color-black);
   margin-inline: 102px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.dynamic-headline__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: scrollText 20s linear infinite;
+          animation: scrollText 20s linear infinite;
 }
 
 .dynamic-headline__text::after {
@@ -387,11 +396,32 @@ button:focus-visible {
   position: absolute;
   width: 36px;
   height: 36px;
-  background-image: url(/img/dynamic-headline__img-star.svg);
+  background-image: url("/img/dynamic-headline__img-star.svg");
   top: 4px;
   left: -119px;
 }
 
+@-webkit-keyframes scrollText {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
 .fyp > .container {
   background-color: var(--color-black);
   position: relative;
@@ -661,6 +691,9 @@ button:focus-visible {
 @media (max-width: 835px) {
   .fyp-card {
     height: 470px;
+  }
+  .fyp-card__img {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
