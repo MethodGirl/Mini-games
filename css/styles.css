@@ -326,7 +326,7 @@ button:focus-visible {
   left: 63px;
   z-index: 2;
   height: 57px;
-  background-image: url(/img/header__content-starBefore.svg);
+  background-image: url(./img/header__content-starBefore.svg);
 }
 
 .header::after {
@@ -336,7 +336,7 @@ button:focus-visible {
   top: 69px;
   left: 156px;
   height: 35px;
-  background-image: url(/img/header__content-starAfter.svg);
+  background-image: url(./img/header__content-starAfter.svg);
 }
 
 .header__wrapper::before {
@@ -344,7 +344,7 @@ button:focus-visible {
   position: absolute;
   height: 35px;
   width: 35px;
-  background-image: url(/img/header__wrapper-starBefore.svg);
+  background-image: url(./img/header__wrapper-starBefore.svg);
   top: 538px;
   right: 433px;
 }
@@ -354,7 +354,7 @@ button:focus-visible {
   position: absolute;
   height: 83px;
   width: 83px;
-  background-image: url(/img/header__wrapper-starAfter.svg);
+  background-image: url(./img/header__wrapper-starAfter.svg);
   top: 568px;
   right: 321px;
 }
@@ -432,7 +432,7 @@ button:focus-visible {
   width: 435px;
   position: absolute;
   height: 584.7165px;
-  background-image: url(/img/cards-img/fyp__img-star.png);
+  background-image: url(./img/cards-img/fyp__img-star.png);
   background-repeat: no-repeat;
   bottom: 774px;
   right: 0px;
@@ -478,7 +478,7 @@ button:focus-visible {
   background-repeat: no-repeat;
   bottom: 571px;
   left: -80px;
-  background-image: url(/img/cards-img/fyp__mini-starBefore-img.svg);
+  background-image: url(./img/cards-img/fyp__mini-starBefore-img.svg);
 }
 
 .fyp-content__group-first::after {
@@ -489,7 +489,7 @@ button:focus-visible {
   background-repeat: no-repeat;
   bottom: 655px;
   left: -100px;
-  background-image: url(/img/cards-img/fyp__mini-starAfter-img.svg);
+  background-image: url(./img/cards-img/fyp__mini-starAfter-img.svg);
 }
 
 .fyp-card {
@@ -559,7 +559,7 @@ button:focus-visible {
   width: 36px;
   height: 36px;
   background-repeat: no-repeat;
-  background-image: url(/img/games-img/game__firstBefore-img.svg);
+  background-image: url(./img/games-img/game__firstBefore-img.svg);
   right: 112px;
   top: 151px;
 }
@@ -570,7 +570,7 @@ button:focus-visible {
   width: 69px;
   height: 69px;
   background-repeat: no-repeat;
-  background-image: url(/img/games-img/game__firstAfter-img.svg);
+  background-image: url(./img/games-img/game__firstAfter-img.svg);
   right: 32px;
   top: 189px;
 }
@@ -581,7 +581,7 @@ button:focus-visible {
   width: 69px;
   height: 69px;
   background-repeat: no-repeat;
-  background-image: url(/img/games-img/game__lastBefore-img.svg);
+  background-image: url(./img/games-img/game__lastBefore-img.svg);
   right: 120px;
   bottom: -156px;
 }
@@ -592,7 +592,7 @@ button:focus-visible {
   width: 69px;
   height: 69px;
   background-repeat: no-repeat;
-  background-image: url(/img/games-img/game__lastAfter-img.svg);
+  background-image: url(./img/games-img/game__lastAfter-img.svg);
   right: 45px;
   bottom: -94px;
 }
@@ -775,7 +775,7 @@ button:focus-visible {
     left: 97px;
     z-index: 2;
     height: 21px;
-    background-image: url(/img/adaptive/header__introBeforeAdaptive-img.svg);
+    background-image: url(./img/adaptive/header__introBeforeAdaptive-img.svg);
   }
   .header::after {
     content: "";
@@ -785,7 +785,7 @@ button:focus-visible {
     left: 42px;
     z-index: 2;
     height: 35px;
-    background-image: url(/img/adaptive/header__introAfterAdaptive-img.svg);
+    background-image: url(./img/adaptive/header__introAfterAdaptive-img.svg);
   }
   .header__wrapper > .container {
     position: relative;
@@ -797,7 +797,7 @@ button:focus-visible {
     width: 160px;
     right: 0;
     background-repeat: no-repeat;
-    background-image: url(/img/adaptive/conteinerBeforeAdaptive-img.png);
+    background-image: url(./img/adaptive/conteinerBeforeAdaptive-img.png);
   }
   .header__link-anchor::before {
     content: "";
@@ -805,7 +805,7 @@ button:focus-visible {
     height: 18px;
     width: 18px;
     background-repeat: no-repeat;
-    background-image: url(/img/adaptive/header-wrapperAdapBefore__img.svg);
+    background-image: url(./img/adaptive/header-wrapperAdapBefore__img.svg);
     top: 90px;
     left: 226px;
     z-index: 2;
@@ -815,7 +815,7 @@ button:focus-visible {
     position: absolute;
     height: 41px;
     width: 39px;
-    background-image: url(/img/adaptive/header-wrapperAdapAfter__img.svg);
+    background-image: url(./img/adaptive/header-wrapperAdapAfter__img.svg);
     top: 118px;
     left: 255px;
     z-index: 2;
@@ -832,7 +832,7 @@ button:focus-visible {
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
-    background-image: url(/img/adaptive/dynamic-lineAdaptiveStar-img.svg);
+    background-image: url(./img/adaptive/dynamic-lineAdaptiveStar-img.svg);
     left: -83px;
     top: 2px;
   }
