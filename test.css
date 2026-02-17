@@ -1,0 +1,87 @@
+/* 1 */
+
+.test1 {
+    display: flex;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.showtitle-button {
+    width: 100px;
+    border: none;
+    text-align: center;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    background-color: pink;
+    margin-left: 23px;
+}
+
+.title-hidden {
+    visibility: hidden;
+}
+
+/* 2 */
+
+.test2 {
+    display: flex;
+    align-items: center;
+}
+
+.paragraph {
+    font-size: 22px;
+    height: 40px;
+    align-content: center;
+    color: chartreuse;
+    padding: 5px;
+}
+
+.changecolor-button {
+    width: 100px;
+    border: none;
+    text-align: center;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    background-color: pink;
+    margin-left: 23px;
+}
+
+/* 3 */
+
+.test3 {
+    display: flex;
+    align-items: center;
+}
+
+.changetext-button {
+    width: 140px;
+    border: none;
+    text-align: center;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    background-color: pink;
+    margin-left: 23px;
+}
+
+/* 4 */
+
+.test4 {
+    border: 1px solid pink;
+}
+
+/* 6 */
+
+.createel {
+    width: 140px;
+    border: none;
+    text-align: center;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    background-color: pink;
+    margin-left: 23px;
+}

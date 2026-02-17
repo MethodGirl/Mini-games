@@ -12,18 +12,34 @@
         font-size: clamp(16px, 3.2vw, 30px);
         font-weight: 700;
         text-transform: uppercase;
-        text-wrap: nowrap;
+        white-space: nowrap;
         color: var(--color-black);
         margin-inline: 102px;
+        flex-shrink: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        animation: scrollText 20s linear infinite;
     }
 }
 
-.dynamic-headline__text::after{
+.dynamic-headline__text::after {
     content: "";
     position: absolute;
     width: 36px;
     height: 36px;
-    background-image: url(/img/dynamic-headline__img-star.svg);
+    background-image: url('/img/dynamic-headline__img-star.svg');
     top: 4px;
     left: -119px;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }

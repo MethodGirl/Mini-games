@@ -252,7 +252,7 @@ let rules = [
     ["бумага", "камень"]
 ];
 
-let gameItems = ["камень","ножницы","бумага"]
+let gameItems = ["камень", "ножницы", "бумага"]
 
 function rockPaperScissors() {
     let playAgain = true;
@@ -310,3 +310,66 @@ function rockPaperScissors() {
 }
 
 rockPaperScissorsGame.addEventListener('click', () => rockPaperScissors())
+
+// 6 игра
+
+let randomColorGeneratorGame = document.querySelector('.button-randomColorGenerator');
+
+let rgb1 = 0;
+let rgb2 = 0;
+let rgb3 = 0;
+
+let link = '. Посмотреть его можно тут: https://www.colorhexa.com/'
+
+function randomRgb(rgb) {
+    return Math.floor(Math.random() * (255 - 0 + 1) + 0)
+}
+
+function getRandomColor() {
+    rgb1 = randomRgb(rgb1)
+    rgb2 = randomRgb(rgb2)
+    rgb3 = randomRgb(rgb3)
+
+    let result = `Твой цвет: rgb(${rgb1}, ${rgb2}, ${rgb3}) ♡`;
+
+    return result
+}
+
+function randomColorGenerator() {
+    let input = confirm('(ﾉ´ヮ`)ﾉ* Сгенерируем случайный цвет? ')
+
+    let result = getRandomColor()
+
+    if (!input) {
+        alert('Тогда закончим ( ´ ꒳ ` )')
+        return
+    }
+
+    alert(result + link);
+
+    while (true) {
+        let result = getRandomColor()
+        if (!confirm(result + ' Понравился? Если нет, попробуем ещё раз (￣^￣)ゞ')) break;
+    }
+
+    alert('Тогда закончим ( ´ ꒳ ` )')
+}
+
+randomColorGeneratorGame.addEventListener('click', () => randomColorGenerator());
+
+// меняем href
+
+const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+function handleScreenChange(e){
+    const link = document.querySelector('.header__link-anchor');
+
+    if(e.matches){
+        link.href = '#guessAnumber'
+    } else {
+        link.href = '#about'
+    }
+}
+
+mediaQuery.addEventListener('change', () => handleScreenChange)
+handleScreenChange(mediaQuery)
