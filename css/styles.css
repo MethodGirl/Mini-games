@@ -396,7 +396,7 @@ button:focus-visible {
   position: absolute;
   width: 36px;
   height: 36px;
-  background-image: url("/img/dynamic-headline__img-star.svg");
+  background-image: url("./img/dynamic-headline__img-star.svg");
   top: 4px;
   left: -119px;
 }
