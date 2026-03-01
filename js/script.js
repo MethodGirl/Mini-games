@@ -314,14 +314,13 @@ rockPaperScissorsGame.addEventListener('click', () => rockPaperScissors())
 // 6 игра
 
 let randomColorGeneratorGame = document.querySelector('.button-randomColorGenerator');
-let container = document.querySelector('#randomColorGenerator');
-
+let containers = document.querySelectorAll('[data-action="color-change"]');
 
 let rgb1 = 0;
 let rgb2 = 0;
 let rgb3 = 0;
 
-let message = '. Взгляни, как изменился фон игры'
+let message = '. Взгляни, как изменился фон сайта'
 
 function randomRgb(rgb) {
     return Math.floor(Math.random() * (255 - 0 + 1) + 0)
@@ -351,7 +350,7 @@ function randomColorGenerator() {
     }
 
     alert(result.text + message);
-    container.style.backgroundColor = result.rgb
+    containers.forEach((el) => el.style.backgroundColor = result.rgb)
 }
 
 randomColorGeneratorGame.addEventListener('click', () => randomColorGenerator());
